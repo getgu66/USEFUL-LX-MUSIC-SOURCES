@@ -328,18 +328,19 @@
             color: #ce93d8;
         }
         
-        /* ===== 重要提醒 - 红色醒目样式 ===== */
+        /* ===== 重要提醒 - 放在底部，全宽红色醒目样式 ===== */
         .warning-box {
-            background: linear-gradient(135deg, rgba(220, 38, 38, 0.25) 0%, rgba(185, 28, 28, 0.25) 100%);
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(185, 28, 28, 0.3) 100%);
             border-radius: 16px;
             padding: 25px 20px;
-            margin-top: 20px;
+            margin: 30px 0 10px 0;
             border: 2px solid #ef4444;
             display: flex;
             align-items: center;
             box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
             backdrop-filter: blur(10px);
             animation: pulseRed 2s infinite ease-in-out;
+            width: 100%;
         }
         
         @keyframes pulseRed {
@@ -354,17 +355,17 @@
         }
         
         .warning-box i {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #ff6b6b;
-            margin-right: 20px;
+            margin-right: 25px;
             flex-shrink: 0;
             animation: shakeRed 0.6s ease-in-out infinite;
             text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
         }
         
         @keyframes shakeRed {
-            0%, 100% { transform: rotate(-8deg) scale(1); }
-            50% { transform: rotate(8deg) scale(1.1); }
+            0%, 100% { transform: rotate(-6deg) scale(1); }
+            50% { transform: rotate(6deg) scale(1.08); }
         }
         
         .warning-box div {
@@ -372,7 +373,7 @@
         }
         
         .warning-box strong {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #ff8a8a;
             display: block;
             margin-bottom: 8px;
@@ -603,6 +604,16 @@
                 margin-left: 0;
                 min-width: auto;
             }
+
+            .warning-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            .warning-box i {
+                margin-right: 0;
+                margin-bottom: 15px;
+                font-size: 2.5rem;
+            }
         }
         
         @media (max-width: 768px) {
@@ -712,25 +723,16 @@
                         </a>
                     </div>
                 </div>
-   
-                <!-- 重要提醒 - 醒目的红色 -->
-                <div class="warning-box">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <div>
-                        <strong>⚠️ 重要提醒 ⚠️</strong>
-                        <div>音乐平台不易，请支持正版音乐！本资源仅供学习交流使用，请低调使用，严禁用于商业用途！</div>
-                    </div>
-                </div>
             </div>
             
             <!-- 右侧侧边栏 -->
             <aside class="sidebar">
+                <!-- 最近更新卡片 - 已移至右侧 -->
                 <div class="sidebar-card">
                     <h3><i class="fas fa-info-circle"></i> 最近更新</h3>
                     <div class="update-info">
                         <div class="update-date"><i class="far fa-calendar-check"></i> 2026年6月</div>
                         <p>6.21 ceru music被办了，下载音源，请到上方GitHub地址下载，或下载我们的app，速度会快很多，音源也更多！所有音源仅供个人学习研究使用，严禁商用！否则带来的后果本人概不负责！</p>
-                        
                     </div>
                     <p style="font-size:0.95rem; color:#94a3b8;">感谢guoyue2010，@krpal 对本项目的大力支持！</p>
                 </div>
@@ -761,6 +763,15 @@
                     <div style="display: flex; justify-content: space-between;"><span>最后更新：</span><span style="color:#ce93d8; font-weight:600;">2026.06</span></div>
                 </div>
             </aside>
+        </div>
+
+        <!-- ===== 重要提醒 - 放在底部，全宽 ===== -->
+        <div class="warning-box">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+                <strong>⚠️ 重要提醒 ⚠️</strong>
+                <div>音乐平台不易，请支持正版音乐！本资源仅供学习交流使用，请低调使用，严禁用于商业用途！</div>
+            </div>
         </div>
     </main>
 
